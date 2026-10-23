@@ -14,22 +14,46 @@ A MERN-stack hotel booking and management system. Guests search for rooms by dat
 React (Vite), React Router, Bootstrap 5, Axios, Node.js, Express, MongoDB with Mongoose, JSON Web Tokens, bcrypt
 
 ## Getting started
-You need Node.js 18+ and MongoDB (local, or a free MongoDB Atlas cluster).
 
-```bash
-# 1. API
+You need *Node.js 18+* and *MongoDB* (local or a free MongoDB Atlas cluster).
+
+### 1. Start the API (Backend)
+
+bash
 cd server
 npm install
-cp .env.example .env      # then edit MONGO_URI and JWT_SECRET
-npm run seed              # sample rooms and demo accounts
-npm run dev               # http://localhost:5000
 
-# 2. Client (new terminal)
+
+Create a .env file inside the server folder and add the following:
+
+env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_long_random_secret
+PORT=5000
+CLIENT_URL=http://localhost:5173
+
+
+Replace the placeholder values with your own MongoDB connection string and a long, random JWT secret.
+
+Then run:
+
+bash
+npm run seed
+npm run dev
+
+
+The API will run at [http://localhost:5000](http://localhost:5000).
+
+*Note:* The seed command deletes existing users, rooms, and bookings in the connected database before inserting demo data. Use it only with a fresh or disposable development database.
+
+### 2. Start the Client (Frontend)
+
+Open a *new terminal* and run:
+
+bash
 cd client
 npm install
-cp .env.example .env
-npm run dev               # http://localhost:5173
-```
+npm run dev
 
 ## Demo accounts (after seeding)
 | Role  | Email              | Password |
