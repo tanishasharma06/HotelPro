@@ -1,0 +1,51 @@
+:root {
+  --ink: #12263a;
+  --lagoon: #1f6f78;
+  --lagoon-dark: #175860;
+  --mist: #eef3f3;
+  --brass: #b8893b;
+  --danger: #b3412f;
+  --bs-primary: var(--lagoon);
+  --bs-primary-rgb: 31, 111, 120;
+  --bs-body-font-family: 'Figtree', system-ui, sans-serif;
+  --bs-body-color: var(--ink);
+}
+body { background: var(--mist); }
+h1, h2, h3, .brand { font-family: 'Young Serif', Georgia, serif; font-weight: 400; letter-spacing: 0; }
+
+.btn-primary { --bs-btn-bg: var(--lagoon); --bs-btn-border-color: var(--lagoon);
+  --bs-btn-hover-bg: var(--lagoon-dark); --bs-btn-hover-border-color: var(--lagoon-dark);
+  --bs-btn-active-bg: var(--lagoon-dark); --bs-btn-active-border-color: var(--lagoon-dark); }
+.btn-outline-primary { --bs-btn-color: var(--lagoon); --bs-btn-border-color: var(--lagoon);
+  --bs-btn-hover-bg: var(--lagoon); --bs-btn-hover-border-color: var(--lagoon); }
+a { color: var(--lagoon); }
+:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+
+.topbar { background: var(--ink); }
+.topbar .brand { color: #fff; font-size: 1.5rem; text-decoration: none; }
+.topbar .nav-link { color: #cfdcdc; }
+.topbar .nav-link.active, .topbar .nav-link:hover { color: #fff; }
+
+/* The booking search is the hero: it sits on the dark band and overlaps the room list. */
+.hero { background: var(--ink); color: #fff; padding: 3.5rem 0 6rem; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); max-width: 18ch; line-height: 1.1; }
+.hero p { color: #b9c9cc; max-width: 46ch; }
+.search-panel { margin-top: -3.5rem; background: #fff; border-radius: 6px; padding: 1.25rem;
+  box-shadow: 0 8px 24px rgba(18, 38, 58, .12); border-top: 4px solid var(--brass); }
+
+.room-card { background: #fff; border: 1px solid #d6e0e0; border-radius: 6px; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
+.room-art { height: 140px; background: linear-gradient(135deg, var(--lagoon), var(--ink)); color: #ffffffcc;
+  display: flex; align-items: flex-end; padding: .75rem 1rem; font-family: 'Young Serif', serif; font-size: 1.75rem; }
+.room-art img { width: 100%; height: 100%; object-fit: cover; }
+.price { font-weight: 700; color: var(--ink); }
+.amenity { background: var(--mist); border-radius: 3px; padding: .15rem .5rem; font-size: .8rem; margin: 0 .25rem .25rem 0; display: inline-block; }
+
+.status { padding: .15rem .55rem; border-radius: 3px; font-size: .8rem; font-weight: 500; }
+.status-confirmed { background: #dcecee; color: var(--lagoon-dark); }
+.status-checked-in { background: #e9efd6; color: #4b5d12; }
+.status-checked-out { background: #e5e7ea; color: #444; }
+.status-cancelled { background: #f6dcd7; color: var(--danger); }
+
+.stat { background: #fff; border: 1px solid #d6e0e0; border-radius: 6px; padding: 1rem 1.25rem; }
+.stat .num { font-family: 'Young Serif', serif; font-size: 1.9rem; }
+.panel { background: #fff; border: 1px solid #d6e0e0; border-radius: 6px; padding: 1.25rem; }
